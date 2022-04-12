@@ -19,12 +19,25 @@ else:
 
 #3) Para los valores enteros del 1 al 20, imprimir por pantalla si es par o impar
 
-for n range(1:20)
-
+i = 1
+while (i <= 20):
+    if (i % 2 == 0):
+        print(f'[{i} es par')
+    else:
+        print(f'{i} es impar')
+    i = i + 1
 
 #4) En un ciclo for mostrar para los valores entre 0 y 5 el resultado de elevarlo a la potencia igual a 3
 
+for i2 in range(0 , 5):
+    print(i2 ** 3)
+
 #5) Crear una variable que contenga un número entero y realizar un ciclo for la misma cantidad de ciclos
+
+n = 6
+j = 1
+for n in range(j,n):
+    print(f'este es el ciclo n°{n} de 5')
 
 #6) Utilizar un ciclo while para realizar el factorial de un número guardado en una variable, sólo si la variable contiene un número entero mayor a 0
 
