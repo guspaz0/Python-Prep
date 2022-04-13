@@ -41,6 +41,12 @@ for n in range(j,n):
 
 #6) Utilizar un ciclo while para realizar el factorial de un número guardado en una variable, sólo si la variable contiene un número entero mayor a 0
 
+nro = 5
+factorial = 1
+while(nro < 0):
+    if(nro < 2):
+        
+
 #7) Crear un ciclo for dentro de un ciclo while
 
 #8) Crear un ciclo while dentro de un ciclo for
