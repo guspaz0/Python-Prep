@@ -12,7 +12,7 @@ a = 10
 if (a < 0):
     print('La variable es menor a cero')
 elif (a > 0): 
-    print('La varaible es mayor a cero')
+    print('La variable es mayor a cero')
 else:
     print('La variable es igual a cero')
 
