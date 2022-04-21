@@ -77,8 +77,24 @@ for n in range(1 , n):
         print(n, 'es la condicion while')
     print(n)
 
+#%%
 #9) Imprimir los números primos existentes entre 0 y 30
 
+tope_rango = 30
+n = 0
+primo = True
+while (n < 30):
+    for div in range(2 , n):
+        if(n % div == 0):
+            primo = False
+    if primo:
+        print(n)
+    else:
+        primo= True
+    n += 1
+            
+    
+#%%
 #10) ¿Se puede mejorar el proceso del punto 9? Utilizar las sentencias break y/ó continue para tal fin
 
 #11) En los puntos 9 y 10, se diseño un código que encuentra números primos y además se lo optimizó. ¿Es posible saber en qué medida se optimizó?
