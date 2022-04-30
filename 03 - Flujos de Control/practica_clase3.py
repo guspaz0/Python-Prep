@@ -74,11 +74,14 @@ while(n2 == 10):
 n = 10
 for n in range(1 , n):
     while(n == 5):
-        print(n, 'es la condicion while')
-    print(n)
+        print(n,'es la cond. while')
+        break
 
 #%%
 #9) Imprimir los números primos existentes entre 0 y 30
+
+import time
+inicio = time.time()
 
 tope_rango = 30
 n = 0
@@ -88,23 +91,79 @@ while (n < 30):
         if(n % div == 0):
             primo = False
     if primo:
-        print(n)
+        print(n, 'es primo')
     else:
         primo= True
+        print(n, 'no es primo')
     n += 1
-            
+
+fin = time.time()
+print(fin-inicio)          
     
 #%%
 #10) ¿Se puede mejorar el proceso del punto 9? Utilizar las sentencias break y/ó continue para tal fin
 
+tope_rango = 30
+n = 0
+primo = True
+while (n < 30):
+    for div in range(2 , n):
+        if(n % div == 0):
+            primo = False
+            break
+    if primo:
+        print(n, 'es primo')
+    else:
+        primo= True
+        print(n,'no es primo')
+    n += 1
+
+#%%
 #11) En los puntos 9 y 10, se diseño un código que encuentra números primos y además se lo optimizó. ¿Es posible saber en qué medida se optimizó?
 
+import time
+inicio = time.time()
+
+tope_rango = 120
+n = 0
+primo = True
+while (n < 120):
+    for div in range(2 , n):
+        if(n % div == 0):
+            primo = False
+            break
+    if primo:
+        print(n, 'es primo')
+    else:
+        primo= True
+        print(n,'no es primo')
+    n += 1
+
+fin = time.time()
+print(fin-inicio)
+
+#%%
 #12) Si la cantidad de números que se evalúa es mayor a treinta, esa optimización crece?
 
+no, porque aumenta la cantidad de entrada de datos
+
+#%%
 #13) Aplicando continue, armar un ciclo while que solo imprima los valores divisibles por 12, dentro del rango de números de 100 a 300
 
+tope = 201
+i = 100
+div = 12
+while(tope > i):
+    if(i % div == 0):
+        print(i, 'es divisible por', div)
+        continue
+    i += 1
+    print('fin de ciclo', i)
+
+#%%
 #14) Utilizar la función **input()** que permite hacer ingresos por teclado, para encontrar números primos y dar la opción al usario de buscar el siguiente
 
+#%%
 #15) Crear un ciclo while que encuentre dentro del rango de 100 a 300 el primer número divisible por 3 y además múltiplo de 6
 
 # %%
