@@ -170,22 +170,33 @@ while(i < tope ):
 #%%
 #14) Utilizar la función **input()** que permite hacer ingresos por teclado, para encontrar números primos y dar la opción al usario de buscar el siguiente
 
-tope_rango = 120
+tope_rango = 30
 n = 0
 primo = True
-while (n < 120):
+while (n < tope_rango):
     for div in range(2 , n):
         if(n % div == 0):
             primo = False
             break
     if primo:
         print(n, 'es primo')
+        input()
     else:
         primo= True
-        print(n,'no es primo')
     n += 1
 
 #%%
 #15) Crear un ciclo while que encuentre dentro del rango de 100 a 300 el primer número divisible por 3 y además múltiplo de 6
+
+inicio = 100
+tope = 300
+div1 = 3
+div2 = 6
+while(inicio < tope):
+    if(inicio % div1 == 0):
+        if(inicio % div2 == 0):
+            print(inicio, 'es divisible por',div1, 'y',div2)
+            break
+    inicio += 1
 
 # %%
