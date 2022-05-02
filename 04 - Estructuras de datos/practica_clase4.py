@@ -74,11 +74,20 @@ list(tupla)
 type(tupla)
 
 #22) Desempaquetar solo los primeros 3 elementos de la tupla en 3 variables
+print(tupla)
+
+vr1,vr2,vr3,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_ =tupla
+
+print(vr1)
+print(vr2)
+print(vr3)
 
 #23) Crear un diccionario utilizando la lista crada en el punto 1, asignandole la clave "ciudad". Agregar tambien otras claves, como puede ser "Pais" y "Continente".
+diccionario = { 'ciudades': ciudades, 'pais':['Argentina'], 'continente':'America del sur'}
 
 #24) Imprimir las claves del diccionario
+print(diccionario.keys())
 
 #25) Imprimir las ciudades a través de su clave
-
+print(diccionario['ciudades'])
 # %%
