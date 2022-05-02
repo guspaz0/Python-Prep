@@ -54,13 +54,24 @@ print(tupla)
 
 #17) Imprimir desde el índice 10 al 15 de la tupla
 
+print(tupla[10:15])
 #18) Evaluar si los números 20 y 30 están dentro de la tupla
+print(20 in tupla)
+print(30 in tupla)
 
 #19) Con la lista creada en el punto 1, validar la existencia del elemento 'París' y si no existe, agregarlo. Utilizar una variable e informar lo sucedido.
+var2 = 'Paris'
+if (var2 not in ciudades):
+    ciudades.append(var2)    
+    print(var2, 'no existe, sin embargo se agrego a la lista')
 
 #20) Mostrar la cantidad de veces que se encuentra un elemento específico dentro de la tupla y de la lista
+print(tupla.count(10))
+print(ciudades.count('cordoba'))
 
 #21) Convertir la tupla en una lista
+list(tupla)
+type(tupla)
 
 #22) Desempaquetar solo los primeros 3 elementos de la tupla en 3 variables
 
