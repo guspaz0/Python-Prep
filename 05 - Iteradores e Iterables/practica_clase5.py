@@ -8,19 +8,36 @@ while(n < 0):
 print(nro_neg)
 
 #2) ¿Con un ciclo while sería posible recorrer la lista para imprimir sólo los números pares?
-
-while(n in nro_neg):
-    if(n % 2 == 0):
-        print(n,'es par')
+n = 0
+while(n < len(nro_neg)):
+    if(nro_neg[n] % 2 == 0):
+        print(nro_neg[n],'es par')
     n +=1
 
 #3) Resolver el punto anterior sin utilizar un ciclo while
 
+for n in nro_neg[:]:
+    if(nro_neg[n] % 2 == 0):
+        print(nro_neg[n], 'es par')
+    
+
 #4) Utilizar el iterable para recorrer sólo los primeros 3 elementos
+print(nro_neg[0:3])
 
 #5) Utilizar la función **enumerate** para obtener dentro del iterable, tambien el índice al que corresponde el elemento
+for i, s in enumerate(nro_neg):
+    print(i, s)
 
-#6) Dada la siguiente lista de números enteros entre 1 y 20, crear un ciclo donde se completen los valores faltantes: lista = [1,2,5,7,8,10,13,14,15,17,20]
+#%%
+#6) Dada la siguiente lista de números enteros entre 1 y 20, crear un ciclo donde se completen los valores faltantes: 
+
+lista = [1,2,5,7,8,10,13,14,15,17,20]
+print(lista)
+for i, s in enumerate(lista):
+    if ((i) != s and s < lista.pop()):
+        lista.append(i)
+        print(i, 'no esta en la lista, se lo agregó')
+    print(lista)
 
 #%%
 #7) La sucesión de Fibonacci es un listado de números que sigue la fórmula: <br>
