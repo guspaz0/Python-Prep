@@ -32,21 +32,26 @@ for i, s in enumerate(nro_neg):
 #6) Dada la siguiente lista de números enteros entre 1 y 20, crear un ciclo donde se completen los valores faltantes: 
 
 lista = [1,2,5,7,8,10,13,14,15,17,20]
-print(lista)
+ultimo = lista.pop()
+lista.append(ultimo)
 for i, s in enumerate(lista):
-    if ((i) != s and s < lista.pop()):
-        lista.append(i)
+    if ((i) != s and s <= ultimo):
+        lista.insert(i, i)
         print(i, 'no esta en la lista, se lo agregó')
     print(lista)
 
 #%%
-#7) La sucesión de Fibonacci es un listado de números que sigue la fórmula: <br>
-n<sub>0</sub> = 0<br>
-n<sub>1</sub> = 1<br>
-n<sub>i</sub> = n<sub>i-1</sub> + n<sub>i-2</sub><br>
-Crear una lista con los primeros treinta números de la sucesión.<br>
+#7) La sucesión de Fibonacci es un listado de números que sigue la fórmula: 
 
-#8) Realizar la suma de todos elementos de la lista del punto anterior
+n0 = 0
+n1 = 1
+ni = (ni -- 1) + (ni -- 2)
+
+#Crear una lista con los primeros treinta números de la sucesión.
+
+lista = [0, 1]
+#%%
+# 8) Realizar la suma de todos elementos de la lista del punto anterior
 
 #9) La proporción aurea se expresa con una proporción matemática que nace el número irracional Phi= 1,618… que los griegos llamaron número áureo. El cuál se puede aproximar con la sucesión de Fibonacci. Con la lista del ejercicio anterior, imprimir el cociente de los últimos 5 pares de dos números contiguos:<br>
 Donde i es la cantidad total de elementos<br>
