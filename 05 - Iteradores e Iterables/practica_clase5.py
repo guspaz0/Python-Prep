@@ -38,18 +38,23 @@ for i, s in enumerate(lista):
     if ((i) != s and s <= ultimo):
         lista.insert(i, i)
         print(i, 'no esta en la lista, se lo agregó')
-    print(lista)
+print(lista)
 
 #%%
 #7) La sucesión de Fibonacci es un listado de números que sigue la fórmula: 
 
 n0 = 0
 n1 = 1
-ni = (ni -- 1) + (ni -- 2)
+ni = (ni - 1) + (ni - 2)
 
 #Crear una lista con los primeros treinta números de la sucesión.
 
-lista = [0, 1]
+lista = [0,1]
+for i,s in enumerate(lista):
+    while (i <= 30):
+        lista.append( + n1)
+
+
 #%%
 # 8) Realizar la suma de todos elementos de la lista del punto anterior
 
