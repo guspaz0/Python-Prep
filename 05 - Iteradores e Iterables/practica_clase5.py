@@ -68,19 +68,23 @@ sum(lista)
 
 #%%
 #9) La proporción aurea se expresa con una proporción matemática que nace el número irracional Phi= 1,618… que los griegos llamaron número áureo. El cuál se puede aproximar con la sucesión de Fibonacci. Con la lista del ejercicio anterior, imprimir el cociente de los últimos 5 pares de dos números contiguos:<br>
-Donde i es la cantidad total de elementos<br>
-n<sub>i-1</sub> / n<sub>i</sub><br>
-n<sub>i-2</sub> / n<sub>i-1</sub><br>
-n<sub>i-3</sub> / n<sub>i-2</sub><br>
-n<sub>i-4</sub> / n<sub>i-3</sub><br>
-n<sub>i-5</sub> / n<sub>i-4</sub><br>
- 
-for i,s in enumerate(lista):
-    if i >= 25 and  i <=30:
-        print(s /)
+#Donde i es la cantidad total de elementos<br>
+#n<sub>i-1</sub> / n<sub>i</sub><br>
+#n<sub>i-2</sub> / n<sub>i-1</sub><br>
+#n<sub>i-3</sub> / n<sub>i-2</sub><br>
+#n<sub>i-4</sub> / n<sub>i-3</sub><br>
+#n<sub>i-5</sub> / n<sub>i-4</sub><br>
 
+lista = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309] 
+n = 25
+while (n <= 30):
+    print(lista[(n+1)] / lista[n])
+    n += 1
+
+#%%
 #10) A partir de la variable cadena ya dada, mostrar en qué posiciones aparece la letra "n"<br>
 cadena = 'Hola Mundo. Esto es una practica del lenguaje de programación Python'
+
 
 #11) Crear un diccionario e imprimir sus claves utilizando un iterador
 
