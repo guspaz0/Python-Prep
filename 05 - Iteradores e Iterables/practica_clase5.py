@@ -1,5 +1,8 @@
 #%%
 #1) A partir de una lista vacía, utilizar un ciclo while para cargar allí números negativos del -15 al -1
+from ipaddress import summarize_address_range
+
+
 nro_neg = []
 n = -15
 while(n < 0):
@@ -45,19 +48,25 @@ print(lista)
 
 n0 = 0
 n1 = 1
-ni = (ni - 1) + (ni - 2)
+#ni = (ni - 1) + (ni - 2)
 
 #Crear una lista con los primeros treinta números de la sucesión.
 
 lista = [0,1]
 for i,s in enumerate(lista):
-    while (i <= 30):
-        lista.append( + n1)
+    if i <=30:
+        ultimo = lista.pop()
+        penultimo = lista.pop()
+        lista.append(penultimo)
+        lista.append(ultimo)  
+        lista.append(ultimo + penultimo)
+print(lista)
 
-
-#%%
 # 8) Realizar la suma de todos elementos de la lista del punto anterior
 
+sum(lista)
+
+#%%
 #9) La proporción aurea se expresa con una proporción matemática que nace el número irracional Phi= 1,618… que los griegos llamaron número áureo. El cuál se puede aproximar con la sucesión de Fibonacci. Con la lista del ejercicio anterior, imprimir el cociente de los últimos 5 pares de dos números contiguos:<br>
 Donde i es la cantidad total de elementos<br>
 n<sub>i-1</sub> / n<sub>i</sub><br>
@@ -66,6 +75,9 @@ n<sub>i-3</sub> / n<sub>i-2</sub><br>
 n<sub>i-4</sub> / n<sub>i-3</sub><br>
 n<sub>i-5</sub> / n<sub>i-4</sub><br>
  
+for i,s in enumerate(lista):
+    if i >= 25 and  i <=30:
+        print(s /)
 
 #10) A partir de la variable cadena ya dada, mostrar en qué posiciones aparece la letra "n"<br>
 cadena = 'Hola Mundo. Esto es una practica del lenguaje de programación Python'
@@ -83,3 +95,5 @@ lis = [18,21,29,32,35,42,56,60,63,71,84,90,91,100]
 lis = [[1,2,3,4],'rojo','verde',[True,False,False],['uno','dos','tres']]
 
 #16) Tomar la lista del punto anterior y convertir cada elemento en una lista si no lo es
+
+# %%
