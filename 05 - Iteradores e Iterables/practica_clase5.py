@@ -1,7 +1,5 @@
 #%%
 #1) A partir de una lista vacía, utilizar un ciclo while para cargar allí números negativos del -15 al -1
-from ipaddress import summarize_address_range
-
 
 nro_neg = []
 n = -15
@@ -85,19 +83,51 @@ while (n <= 30):
 #10) A partir de la variable cadena ya dada, mostrar en qué posiciones aparece la letra "n"<br>
 cadena = 'Hola Mundo. Esto es una practica del lenguaje de programación Python'
 
+for i,s in enumerate(cadena):
+    if (s == 'n'):
+        print('el caracter', i, 'contiene la letra n')
 
+#%%
 #11) Crear un diccionario e imprimir sus claves utilizando un iterador
+dic_esp_ing = {'golpear':'punch', 'saltar':'jump','escribir':'write', 'ver':'show', 'escritorio':'Desktop'}
 
+for i in dic_esp_ing:
+    print(i)
+
+#%%
 #12) Convertir en una lista la variable "cadena" del punto 10 y luego recorrerla con un iterador 
 
+cadena = 'Hola Mundo. Esto es una practica del lenguaje de programación Python'
+iterador = iter(list(cadena))
+for i in list(cadena):
+    print(next(iterador))
+
+#%%
 #13) Crear dos listas y unirlas en una tupla utilizando la función zip
 
+numeros = [1,2,3,4,5]
+letras = ['a','b','c','d','e']
+num_letras = zip(numeros, letras)
+print(list(num_letras))
+
+#%%
 #14) A partir de la siguiente lista de números, crear una nueva sólo si el número es divisible por 7<br>
 lis = [18,21,29,32,35,42,56,60,63,71,84,90,91,100]
+lis7 = []
 
+for i,s in enumerate(lis):
+    if (s % 7 == 0):
+        lis7.append(s)
+print(lis7)
+
+#%%
 #15) A partir de la lista de a continuación, contar la cantidad total de elementos que contiene, teniendo en cuenta que un elemento de la lista podría ser otra lista:<br>
 lis = [[1,2,3,4],'rojo','verde',[True,False,False],['uno','dos','tres']]
 
+for i in lis:
+    print(next(iter(lis)))
+
+#%%
 #16) Tomar la lista del punto anterior y convertir cada elemento en una lista si no lo es
 
 # %%
