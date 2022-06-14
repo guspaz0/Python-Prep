@@ -123,11 +123,22 @@ print(lis7)
 #%%
 #15) A partir de la lista de a continuación, contar la cantidad total de elementos que contiene, teniendo en cuenta que un elemento de la lista podría ser otra lista:<br>
 lis = [[1,2,3,4],'rojo','verde',[True,False,False],['uno','dos','tres']]
+cantidad = 0
+for i,s in enumerate(lis):
+    if type(s) == list:
+        cantidad += len(s)
+    else:
+        cantidad +=1
+print('la cantidad total de elementos es', cantidad)
 
-for i in lis:
-    print(next(iter(lis)))
 
 #%%
 #16) Tomar la lista del punto anterior y convertir cada elemento en una lista si no lo es
+lis = [[1,2,3,4],'rojo','verde',[True,False,False],['uno','dos','tres']]
 
+for i,s in enumerate(lis):
+    if (type(s) != list):
+        lis[i]=[s]
+
+print(lis)
 # %%
