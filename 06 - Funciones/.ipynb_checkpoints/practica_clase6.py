@@ -59,12 +59,66 @@ valor_modal(lista)
 
 #%%
 #4) A la función del punto 3, agregar un parámetro más, que permita elegir si se requiere el menor o el mayor de los mas repetidos.
+lista = [1,1,1,3,4,6,8,8,9,9,8,8,8]
 
+def valor_modal(n, menor):
+    if len(n) == 0:
+        return None
+    lista_unicos = []
+    lista_repetidos = []
+    for i in n:
+        if i in lista_unicos:
+            lista_repetidos.append(i)
+        else:
+            lista_unicos.append(i)
+    cantidad_repetidos = []
+    for i in lista_unicos:
+        cantidad_repetidos.append(lista_repetidos.count(i))
+    if not (menor):
+        for i,e in enumerate(lista_unicos):
+                if i == cantidad_repetidos.index(max(cantidad_repetidos)):
+                    print(e, "es la moda y se repite", max(cantidad_repetidos),"veces")
+    else:
+        for i,e in enumerate(lista_unicos):
+                if i == cantidad_repetidos.index(min(cantidad_repetidos)):
+                    print(e, "es la menor moda y se repite", min(cantidad_repetidos),"veces")
+
+valor_modal(lista, True)
+
+#%%
 #5) Crear una función que convierta entre grados Celsius, Farenheit y Kelvin<br>
 #Fórmula 1	: (°C × 9/5) + 32 = °F<br>
 #Fórmula 2	: °C + 273.15 = °K<br>
 #Debe recibir 3 parámetros: el valor, la medida de orígen y la medida de destino
 
+def convertir_temp(valor, medida_origen, medida_destino):
+    if medida_origen == "celsius":
+        if medida_destino == "celsius":
+            return valor
+        elif medida_destino == "farenheit":
+            return (valor*9/5)+32
+        elif medida_destino == "kelvin":
+            return valor+273.15
+    if medida_origen == "farenheit":
+        if medida_destino == "celsius":
+            return (valor/(9/5))-32
+        elif medida_destino == "farenheit":
+            return valor
+        elif medida_destino == "kelvin":
+            return (valor/9/5) - 32 + 273.15
+    if medida_origen == "kelvin":
+        if medida_destino == "celsius":
+            return valor - 273.15
+        elif medida_destino == "farenheit":
+            return ((valor - 273.15)*9/5)+32
+        elif medida_destino == "kelvin":
+            return valor
+
+    
+convertir_temp(21,"farenheit","celsius")
+
+
+#%%
 #6) Iterando una lista con los tres valores posibles de temperatura que recibe la función del punto 5, hacer un print para cada combinación de los mismos:
 
 #7) Armar una función que devuelva el factorial de un número. Tener en cuenta que el usuario puede equivocarse y enviar de parámetro un número no entero o negativo
