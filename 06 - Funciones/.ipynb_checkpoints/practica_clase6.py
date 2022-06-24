@@ -120,5 +120,47 @@ convertir_temp(21,"farenheit","celsius")
 
 #%%
 #6) Iterando una lista con los tres valores posibles de temperatura que recibe la función del punto 5, hacer un print para cada combinación de los mismos:
+def convertir_temp(valor, medida_origen, medida_destino):
+    if medida_origen == "celsius":
+        if medida_destino == "celsius":
+            return valor
+        elif medida_destino == "farenheit":
+            return (valor*9/5)+32
+        elif medida_destino == "kelvin":
+            return valor+273.15
+    if medida_origen == "farenheit":
+        if medida_destino == "celsius":
+            return (valor/(9/5))-32
+        elif medida_destino == "farenheit":
+            return valor
+        elif medida_destino == "kelvin":
+            return (valor/9/5) - 32 + 273.15
+    if medida_origen == "kelvin":
+        if medida_destino == "celsius":
+            return valor - 273.15
+        elif medida_destino == "farenheit":
+            return ((valor - 273.15)*9/5)+32
+        elif medida_destino == "kelvin":
+            return valor
 
-#7) Armar una función que devuelva el factorial de un número. Tener en cuenta que el usuario puede equivocarse y enviar de parámetro un número no entero o negativo
+medidas = ("farenheit","kelvin","celsius")
+valor = 21
+for i in range(0,3):
+    for j in range(0,3):
+        print('conversion de',medidas[i], 'a ',medidas[j],'es:',convertir_temp(valor,medidas[i],medidas[j]))
+
+#%%
+#7) Armar una función que devuelva el factorial de un número. Tener en cuenta que el usuario puede equivocarse y enviar de parámetro un número no entero o negativo+
+
+def factorial(valor):
+    if type(valor) == str:
+        return print('el factorial debe ser un numero entero')
+    if valor <= 0:
+        return print('el factorial debe ser mayor a 0')
+    if valor > 1:
+        valor = valor * factorial(valor - 1)
+    return valor
+
+factorial(4)
+                       
+# %%
