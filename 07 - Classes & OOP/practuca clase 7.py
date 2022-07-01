@@ -127,12 +127,77 @@ a1.acelerar(30)
 a1.estado()
 #%%
 #5) Crear una clase que permita utilizar las funciones creadas en la práctica del módulo 6<br>
+
 #Verificar Primo<br>
 #Valor modal<br>
 #Conversión grados<br>
 #Factorial<br>
 
+class funciones_clase5:
+    def __init__(self,valor):
+        self.valor = valor
+    def es_primo(x):
+        es_primo = True
+        for n in range(2, x):
+            if (x % n == 0):
+                es_primo = False
+                break
+        return print(x, 'es primo')
+    def valor_modal(n):
+        if len(n) == 0:
+            return None
+        lista_unicos = []
+        lista_repetidos = []
+        for i in n:
+            if i in lista_unicos:
+                lista_repetidos.append(i)
+            else:
+                lista_unicos.append(i)
+        cantidad_repetidos = []
+        for i in lista_unicos:
+            cantidad_repetidos.append(lista_repetidos.count(i))
+        for i,e in enumerate(lista_unicos):
+            if i == cantidad_repetidos.index(max(cantidad_repetidos)):
+                print(e, "es la moda y se repite", max(cantidad_repetidos),"veces")
 
+    def convertir_temp(valor, medida_origen, medida_destino):
+        if medida_origen == "celsius":
+            if medida_destino == "celsius":
+                return valor
+            elif medida_destino == "farenheit":
+                return (valor*9/5)+32
+            elif medida_destino == "kelvin":
+                return valor+273.15
+        if medida_origen == "farenheit":
+            if medida_destino == "celsius":
+                return (valor/(9/5))-32
+            elif medida_destino == "farenheit":
+                return valor
+            elif medida_destino == "kelvin":
+                return (valor/9/5) - 32 + 273.15
+        if medida_origen == "kelvin":
+            if medida_destino == "celsius":
+                return valor - 273.15
+            elif medida_destino == "farenheit":
+                return ((valor - 273.15)*9/5)+32
+            elif medida_destino == "kelvin":
+                return valor
+
+    def factorial(valor):
+        if type(valor) == str:
+            return print('el factorial debe ser un numero entero')
+        if valor <= 0:
+            return print('el factorial debe ser mayor a 0')
+        if valor > 1:
+            valor = valor * funciones_clase5.factorial(valor - 1)
+        return valor
+
+lista = [1,1,1,3,4,6,8,8,9,9,8,8,8]
+
+funciones_clase5.es_primo(11)
+funciones_clase5.valor_modal(lista)
+funciones_clase5.convertir_temp(21, "farenheit", "celsius")
+funciones_clase5.factorial(4)
 
 #%%
 #6) Probar las funciones incorporadas en la clase del punto 5
