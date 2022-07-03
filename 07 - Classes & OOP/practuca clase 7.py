@@ -188,7 +188,6 @@ class funciones_clase5:
             elif medida_destino == "kelvin":
                 return valor
 
-        medidas = ("farenheit","kelvin","celsius")
         for i in range(0,3):
             for j in range(0,3):
                 print('conversion de',medidas[i], 'a ',medidas[j],'es:',funciones_clase5.convertir_temp(valor,medidas[i],medidas[j]))
@@ -203,10 +202,11 @@ class funciones_clase5:
         return valor
 
 lista = [1,1,1,3,4,6,8,8,9,9,8,8,8]
+medidas = ("farenheit","kelvin","celsius")
 
 funciones_clase5.es_primo(11)
 funciones_clase5.valor_modal(lista,True)
-funciones_clase5.convertir_temp(21, "farenheit", "celsius")
+funciones_clase5.convertir_temp(21,medidas,medidas)
 funciones_clase5.factorial(4)
 
 #%%
@@ -215,3 +215,14 @@ funciones_clase5.factorial(4)
 #7) Es necesario que la clase creada en el punto 5 contenga una lista, sobre la cual se aplquen las funciones incorporadas
 #%%
 #8) Crear un archivo .py aparte y ubicar allí la clase generada en el punto anterior. Luego realizar la importación del módulo y probar alguna de sus funciones
+import herramientas_clase5
+
+lista = [1,1,1,3,4,6,8,8,9,9,8,8,8]
+medidas = ("farenheit","kelvin","celsius")
+
+funciones_clase5.es_primo(11)
+funciones_clase5.valor_modal(lista,True)
+funciones_clase5.convertir_temp(21,medidas,medidas)
+funciones_clase5.factorial(4)
+
+# %%
