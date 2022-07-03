@@ -143,7 +143,7 @@ class funciones_clase5:
                 es_primo = False
                 break
         return print(x, 'es primo')
-    def valor_modal(n):
+    def valor_modal(n, menor):
         if len(n) == 0:
             return None
         lista_unicos = []
@@ -156,9 +156,14 @@ class funciones_clase5:
         cantidad_repetidos = []
         for i in lista_unicos:
             cantidad_repetidos.append(lista_repetidos.count(i))
-        for i,e in enumerate(lista_unicos):
-            if i == cantidad_repetidos.index(max(cantidad_repetidos)):
-                print(e, "es la moda y se repite", max(cantidad_repetidos),"veces")
+        if not (menor):
+            for i,e in enumerate(lista_unicos):
+                    if i == cantidad_repetidos.index(max(cantidad_repetidos)):
+                        print(e, "es la moda y se repite", max(cantidad_repetidos),"veces")
+        else:
+            for i,e in enumerate(lista_unicos):
+                    if i == cantidad_repetidos.index(min(cantidad_repetidos)):
+                        print(e, "es la menor moda y se repite", min(cantidad_repetidos),"veces")
 
     def convertir_temp(valor, medida_origen, medida_destino):
         if medida_origen == "celsius":
@@ -183,6 +188,11 @@ class funciones_clase5:
             elif medida_destino == "kelvin":
                 return valor
 
+        medidas = ("farenheit","kelvin","celsius")
+        for i in range(0,3):
+            for j in range(0,3):
+                print('conversion de',medidas[i], 'a ',medidas[j],'es:',funciones_clase5.convertir_temp(valor,medidas[i],medidas[j]))
+
     def factorial(valor):
         if type(valor) == str:
             return print('el factorial debe ser un numero entero')
@@ -195,7 +205,7 @@ class funciones_clase5:
 lista = [1,1,1,3,4,6,8,8,9,9,8,8,8]
 
 funciones_clase5.es_primo(11)
-funciones_clase5.valor_modal(lista)
+funciones_clase5.valor_modal(lista,True)
 funciones_clase5.convertir_temp(21, "farenheit", "celsius")
 funciones_clase5.factorial(4)
 
