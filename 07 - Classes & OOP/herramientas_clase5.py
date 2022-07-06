@@ -76,6 +76,3 @@ class funciones_clase5:
         if valor > 1:
             valor = valor * funciones_clase5.factorial(valor - 1)
         return valor
-
-lista = [1,2,3,4,5,6,7,8,9]
-funciones_clase5.es_primo(11)

@@ -6,8 +6,16 @@ sys.path.append(r'/home/gusta/Documentos/Henry-prep/Python-Prep/07 - Classes & O
 import herramientas_clase5 as h
 import unittest
 
-lista = [1,2,3,4,5,6,7,8,9]
-h.funciones_clase5.es_primo(lista)
+
+class cajanegratest(unittest.testcase):
+    
+    def prueba_(valor):
+        if type(valor) == str
+
+
+
+lista = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+h.funciones_clase5.es_primo(9)
 
 #%%
 #2) En la función que hace la conversión de grados, validar que los parámetros enviados sean los esperados, de no serlo, informar cuáles son los valores esperados.
