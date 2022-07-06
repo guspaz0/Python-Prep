@@ -1,7 +1,15 @@
 class funciones_clase5:
     def __init__(self,valor):
         self.valor = valor
+    
     def es_primo(valor):
+        if type(valor) != int:
+            for i in valor:
+                funciones_clase5._es_primo(i)
+        else:
+            funciones_clase5._es_primo(valor)
+
+    def _es_primo(valor):
         primo = True
         for n in range(2, valor):
             if valor % n == 0:
@@ -68,3 +76,6 @@ class funciones_clase5:
         if valor > 1:
             valor = valor * funciones_clase5.factorial(valor - 1)
         return valor
+
+lista = [1,2,3,4,5,6,7,8,9]
+funciones_clase5.es_primo(11)

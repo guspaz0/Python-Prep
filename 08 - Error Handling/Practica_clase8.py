@@ -6,7 +6,8 @@ sys.path.append(r'/home/gusta/Documentos/Henry-prep/Python-Prep/07 - Classes & O
 import herramientas_clase5 as h
 import unittest
 
-h.funciones_clase5.es_primo(10)
+lista = [1,2,3,4,5,6,7,8,9]
+h.funciones_clase5.es_primo(lista)
 
 #%%
 #2) En la función que hace la conversión de grados, validar que los parámetros enviados sean los esperados, de no serlo, informar cuáles son los valores esperados.
