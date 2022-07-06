@@ -2,7 +2,12 @@
 #%%
 #1) Con la clase creada en el módulo 7, tener en cuenta diferentes casos en que el código pudiera arrojar error. Por ejemplo, en la creación del objeto recibimos una lista de números enteros pero ¿qué pasa si se envía otro tipo de dato?
 import sys
-print(sys.path)
+sys.path.append(r'/home/gusta/Documentos/Henry-prep/Python-Prep/07 - Classes & OOP')
+import herramientas_clase5 as h
+import unittest
+
+h.funciones_clase5.es_primo(10)
+
 #%%
 #2) En la función que hace la conversión de grados, validar que los parámetros enviados sean los esperados, de no serlo, informar cuáles son los valores esperados.
 

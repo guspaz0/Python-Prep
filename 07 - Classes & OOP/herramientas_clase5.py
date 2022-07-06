@@ -1,13 +1,16 @@
 class funciones_clase5:
     def __init__(self,valor):
         self.valor = valor
-    def es_primo(x):
-        es_primo = True
-        for n in range(2, x):
-            if (x % n == 0):
-                es_primo = False
+    def es_primo(valor):
+        primo = True
+        for n in range(2, valor):
+            if valor % n == 0:
+                primo = False
                 break
-        return print(x, 'es primo')
+        if primo == True:
+            return print(valor, "Si es primo")
+        else:
+            return print(valor,"NO es primo")
     def valor_modal(n, menor):
         if len(n) == 0:
             return None
