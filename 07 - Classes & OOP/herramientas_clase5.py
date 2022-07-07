@@ -3,9 +3,14 @@ class funciones_clase5:
         self.valor = valor
     
     def es_primo(valor):
+        if type(valor) == str:
+            valor = []
+            raise ValueError("Se a creado una lista vacia, se esperaba una lista con numeros enteros")
         if type(valor) != int:
+            lista_primos = []
             for i in valor:
-                funciones_clase5._es_primo(i)
+                lista_primos.append(funciones_clase5._es_primo(i))
+            print(lista_primos)
         else:
             funciones_clase5._es_primo(valor)
 
@@ -16,9 +21,10 @@ class funciones_clase5:
                 primo = False
                 break
         if primo == True:
-            return print(valor, "Si es primo")
+            return valor
         else:
-            return print(valor,"NO es primo")
+            return None
+            
     def valor_modal(n, menor):
         if len(n) == 0:
             return None
@@ -41,7 +47,13 @@ class funciones_clase5:
                     if i == cantidad_repetidos.index(min(cantidad_repetidos)):
                         print(e, "es la menor moda y se repite", min(cantidad_repetidos),"veces")
 
-    def convertir_temp(valor, medida_origen, medida_destino):
+    def convertir_temp(valor)
+        medidas = ("farenheit","celsius","kelvin")
+        for i in range(0,3):
+            for j in range(0,3):
+                print('conversion de',medidas[i], 'a ',medidas[j],'es:',funciones_clase5.convertir_temp(valor,medidas[i],medidas[j]))
+
+    def _convertir_temp(valor, medida_origen, medida_destino):
         if medida_origen == "celsius":
             if medida_destino == "celsius":
                 return valor
@@ -63,10 +75,6 @@ class funciones_clase5:
                 return ((valor - 273.15)*9/5)+32
             elif medida_destino == "kelvin":
                 return valor
-
-        for i in range(0,3):
-            for j in range(0,3):
-                print('conversion de',medidas[i], 'a ',medidas[j],'es:',funciones_clase5.convertir_temp(valor,medidas[i],medidas[j]))
 
     def factorial(valor):
         if type(valor) == str:
