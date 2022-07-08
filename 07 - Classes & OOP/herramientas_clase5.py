@@ -1,29 +1,33 @@
 class funciones_clase5:
     def __init__(self,valor):
-        self.valor = valor
-    
-    def es_primo(valor):
-        if type(valor) == str:
-            valor = []
+        if type(valor) != list:
+            lista_valores = []
             raise ValueError("Se a creado una lista vacia, se esperaba una lista con numeros enteros")
-        if type(valor) != int:
-            lista_primos = []
-            for i in valor:
-                lista_primos.append(funciones_clase5._es_primo(i))
-            print(lista_primos)
         else:
-            funciones_clase5._es_primo(valor)
+            self.valor = lista_valores
+
+    def es_primo(lista_valores):
+        if type(lista_valores) == str:
+            raise ValueError("se esperaba un numero entero como entrada")
+        if type(lista_valores) == list:
+            lista_primos = []
+            for i in lista_valores:
+                if funciones_clase5._es_primo(i) == True:                    
+                    lista_primos.append(i)
+            print(lista_primos,'son numeros primos')
+        else:
+            if funciones_clase5._es_primo(lista_valores) == True:
+                print(lista_valores, 'SI es primo')
+            else:
+                print(lista_valores, 'NO es primo')
 
     def _es_primo(valor):
-        primo = True
         for n in range(2, valor):
             if valor % n == 0:
-                primo = False
+                return False
                 break
-        if primo == True:
-            return valor
-        else:
-            return None
+            else:
+                return True
             
     def valor_modal(n, menor):
         if len(n) == 0:
@@ -47,7 +51,7 @@ class funciones_clase5:
                     if i == cantidad_repetidos.index(min(cantidad_repetidos)):
                         print(e, "es la menor moda y se repite", min(cantidad_repetidos),"veces")
 
-    def convertir_temp(valor)
+    def convertir_temp(valor):
         medidas = ("farenheit","celsius","kelvin")
         for i in range(0,3):
             for j in range(0,3):

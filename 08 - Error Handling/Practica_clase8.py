@@ -7,10 +7,9 @@ import herramientas_clase5 as h
 import unittest
 
 
-
 lista1= 'hola'
 lista = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-h.funciones_clase5.es_primo(lista1)
+h.funciones_clase5.es_primo('hola')
 
 #%%
 #2) En la función que hace la conversión de grados, validar que los parámetros enviados sean los esperados, de no serlo, informar cuáles son los valores esperados.
