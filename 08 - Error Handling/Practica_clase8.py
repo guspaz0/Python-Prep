@@ -18,6 +18,9 @@ sys.path.append(r'/home/gusta/Documentos/Henry-prep/Python-Prep/07 - Classes & O
 import herramientas_clase5 as h
 import unittest
 
+def convertir_temp(valor, indicador_origen, indicador_destino):
+    indicadores = ['celsius'.'farenheit','kelvin']
+    if indicador_origen 
 #class cajanegratest(unittest.testcase):
 #    
 #    def prueba_indicadores(valor):
