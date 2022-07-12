@@ -2,9 +2,9 @@
 #%%
 #1) Con la clase creada en el módulo 7, tener en cuenta diferentes casos en que el código pudiera arrojar error. Por ejemplo, en la creación del objeto recibimos una lista de números enteros pero ¿qué pasa si se envía otro tipo de dato?
 import sys
+from unittest.case import _AssertRaisesContext
 sys.path.append(r'/home/gusta/Documentos/Henry-prep/Python-Prep/07 - Classes & OOP')
 import herramientas_clase5 as h
-import unittest
 
 
 lista1= 'hola'
@@ -16,23 +16,28 @@ h.funciones_clase5.es_primo('hola')
 import sys
 sys.path.append(r'/home/gusta/Documentos/Henry-prep/Python-Prep/07 - Classes & OOP')
 import herramientas_clase5 as h
-import unittest
 
-def convertir_temp(valor, indicador_origen, indicador_destino):
-    indicadores = ['celsius'.'farenheit','kelvin']
-    if indicador_origen 
-#class cajanegratest(unittest.testcase):
-#    
-#    def prueba_indicadores(valor):
-#        if type(valor) == str:
 
-h.convertir_temp(21)
+h1 = h.funciones_clase5([1,2,3,4])
+
+h1.convertir_temp('celsius','farenheit')
 
 #%%
 #3) Importar el modulo "unittest" y crear los siguientes casos de pruebas sobre la clase utilizada en el punto 2<br>
 #Creacion del objeto incorrecta<br>
 #Creacion correcta del objeto<br>
 #Metodo valor_modal()<br>
+import sys
+sys.path.append(r'/home/gusta/Documentos/Henry-prep/Python-Prep/07 - Classes & OOP')
+import herramientas_clase5 as h
+import unittest
+
+h1 = h.funciones_clase5([1,2,3,4])
+
+class probando_miclase(unittest.testcase):
+    
+    def _AssertRaisesContext(valor):
+       if type(valor) == str:
 
 #Se puede usar "raise ValueError()" en la creación de la clase para verificar el error. Investigar sobre esta funcionalidad.
 

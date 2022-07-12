@@ -1,10 +1,10 @@
 class funciones_clase5:
     def __init__(self,valor):
         if type(valor) != list:
-            lista_valores = []
+            self.valor = []
             raise ValueError("Se a creado una lista vacia, se esperaba una lista con numeros enteros")
         else:
-            self.valor = lista_valores
+            self.valor = valor
 
     def es_primo(lista_valores):
         if type(lista_valores) == str:
@@ -51,11 +51,16 @@ class funciones_clase5:
                     if i == cantidad_repetidos.index(min(cantidad_repetidos)):
                         print(e, "es la menor moda y se repite", min(cantidad_repetidos),"veces")
 
-    def convertir_temp(valor):
-        medidas = ("farenheit","celsius","kelvin")
-        for i in range(0,3):
-            for j in range(0,3):
-                print('conversion de',medidas[i], 'a ',medidas[j],'es:',funciones_clase5.convertir_temp(valor,medidas[i],medidas[j]))
+    def convertir_temp(self, valor_origen, valor_destino):
+        lista_temp = []
+        medidas = ('farenheit','celsius','kelvin')
+        if valor_origen not in medidas:
+            print('los indicadores de origen y destino deben ser celcius, farenheit o kelvin')
+        if valor_destino not in medidas:
+            print('los indicadores de origen y destino deben ser celcius, farenheit o kelvin')
+        for i in self.valor:
+            lista_temp.append(funciones_clase5._convertir_temp(i, valor_origen, valor_destino))
+        print(lista_temp)
 
     def _convertir_temp(valor, medida_origen, medida_destino):
         if medida_origen == "celsius":
@@ -79,6 +84,13 @@ class funciones_clase5:
                 return ((valor - 273.15)*9/5)+32
             elif medida_destino == "kelvin":
                 return valor
+
+    def indicadores_temp(self, valor):
+        #''se especifica un indicador de temperatura y devuelve el equivalente en otros estandares de indicadores"'
+        medidas = ("farenheit","celsius","kelvin")
+        for i in range(0,3):
+            for j in range(0,3):
+                print('conversion de',medidas[i], 'a ',medidas[j],'es:',funciones_clase5.convertir_temp(valor,medidas[i],medidas[j]))
 
     def factorial(valor):
         if type(valor) == str:
