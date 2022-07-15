@@ -6,7 +6,7 @@ import herramientas_clase5 as h
 
 lista1= 'hola'
 lista = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-h.funciones_clase5.es_primo(lista)
+h.funciones_clase5.es_primo(lista1)
 
 #%%
 #2) En la función que hace la conversión de grados, validar que los parámetros enviados sean los esperados, de no serlo, informar cuáles son los valores esperados.
@@ -31,11 +31,18 @@ import unittest
 
 h1 = h.funciones_clase5([1,2,3,4])
 
-class probando_miclase(unittest.testcase):
+class probando_miclase(unittest.TestCase):
     
-    def creacion_objeto_incorrecta(valor):
-       if type(valor) == str:
-        return ValueError('el objeto no era el esperado')
+    def creacion_objeto_incorrecta(self):
+       param = 'hola'
+       self.assertRaises(ValueError, h.funciones_clase5, param)
+
+    def creacio_objeto_correcta(self):
+        param = [1,2,3,4]
+        h1 = h.funciones_clase5(param)
+        self.assertEqual(h1.,param)
+
+unittest.main(argv=[''], verbosity=2, exit=False)
 
 
 #%%
