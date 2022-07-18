@@ -29,7 +29,6 @@ import sys
 import herramientas_clase5 as h
 import unittest
 
-h1 = h.funciones_clase5([1,2,3,4])
 
 class probando_miclase(unittest.TestCase):
     
@@ -40,7 +39,7 @@ class probando_miclase(unittest.TestCase):
     def creacio_objeto_correcta(self):
         param = [1,2,3,4]
         h1 = h.funciones_clase5(param)
-        self.assertEqual(h1.,param)
+        self.assertEqual(h1.valor, param)
 
 unittest.main(argv=[''], verbosity=2, exit=False)
 

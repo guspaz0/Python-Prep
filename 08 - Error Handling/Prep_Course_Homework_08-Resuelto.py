@@ -66,11 +66,9 @@ h1.conversion_grados('celsius','farenheit')
 
 # In[9]:
 
-
+import sys
+import herramientas as h
 import unittest
-
-
-# In[11]:
 
 
 class ProbandoMiClase(unittest.TestCase):
@@ -93,9 +91,6 @@ class ProbandoMiClase(unittest.TestCase):
         moda.append(veces)
         resultado = [1, 2]
         self.assertEqual(moda, resultado)
-
-
-# In[12]:
 
 
 unittest.main(argv=[''], verbosity=2, exit=False)
